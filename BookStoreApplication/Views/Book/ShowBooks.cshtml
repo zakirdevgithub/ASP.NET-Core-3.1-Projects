@@ -1,0 +1,23 @@
+﻿
+@model IEnumerable<BookModel>
+
+@{
+    ViewData["Title"] = "ShowBooks";
+}
+
+
+@*Card Start*@
+<div class="container ">
+    <div class="row">
+        @foreach (var book in Model)
+        {
+          <partial name="_AllBooks" model="@book" />
+        }
+    </div>
+
+</div>
+<br />
+<br />
+<br />
+@*Card End*@
+

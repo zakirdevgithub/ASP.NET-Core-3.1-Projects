@@ -1,0 +1,31 @@
+﻿<header>
+    @*Navigation Bar Start*@
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+        <div class="container">
+            <a href="" class="navbar-brand">Book Store</a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarid">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse text-center" id="navbarid">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a asp-controller="Home" asp-action="Index" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-controller="Book" asp-action="AddNewBook" class="nav-link">Add Book</a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-controller="Book" asp-action="ShowBooks" class="nav-link">All Books</a>
+                    </li>
+
+
+
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+    @*Navigation Bar End*@
+</header>

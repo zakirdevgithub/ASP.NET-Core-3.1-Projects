@@ -1,0 +1,22 @@
+﻿
+@model BookModel
+
+<div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-12">
+    <div class="card shadow-sm">
+        <img src="@(string.IsNullOrEmpty(Model.CoverImageUrl)? "/images/noimage.png":Model.CoverImageUrl)" class="card-img" />
+        <div class="card-body">
+            <h4 class="card-title text-center">@Model.Title</h4>
+            <p class="card-text text-center">@Model.Description</p>
+        </div>
+        <div class="card-footer">
+            <div class="row">
+                <div class="col-6">
+                    <a asp-controller="Book" asp-action="ShowBookById" asp-route-id="@Model.Id" class="btn btn-warning">View Details</a>
+                </div>
+                <div class="col-6">
+                    <p class="text-right">@Model.Author</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
